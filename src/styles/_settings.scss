@@ -10,15 +10,16 @@
 }
 
 #root {
-    margin: 16px;
+    // margin: 16px;
 }
 
 $color-1: #FF6060;
 $color-2: #FFFFFF;
 $color-3: #000000;
-$linear-gradient: linear-gradient(0deg, #FFFFFF00 0%, #00000080 50%);
+$linear-gradient: linear-gradient(180deg, #FFFFFF00 0%, #00000080 50%);
 
 $medium: 500;
 
 $text-xsmall: 12px;
+$text-small: 18px;
 $text-medium: 24px;
