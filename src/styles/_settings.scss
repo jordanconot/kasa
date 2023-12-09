@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#root {
+    margin: 24px;
+}
+
+$color-1: #FF6060;
+$color-2: #FFFFFF;
+$color-3: #000000;
+$linear-gradient: linear-gradient(0deg, #FFFFFF00 0%, #00000080 50%);
+
+$medium: 500;
+
+$text-xsmall: 12px;
+$tet-medium: 18px;

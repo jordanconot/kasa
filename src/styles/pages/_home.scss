@@ -1,3 +1,29 @@
-h1 {
-    color: red;
+.hearder_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .hearder_wrapper_logo {
+        width: 145px;
+    }
+
+    .header_logo {
+        background-image: url('../../../public/assets/logo.png');
+        background-repeat: no-repeat;
+        height: 50px;
+    }
+    
+    .header_nav {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        .header_text_nav {
+            text-transform: uppercase;
+            color: $color-1;
+            font-size: $text-xsmall;
+            font-weight: $medium;
+            line-height: 17.11px;
+        }
+    }
 }
