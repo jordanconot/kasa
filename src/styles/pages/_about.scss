@@ -6,29 +6,55 @@
 
 .collapse_container {
   padding: 16px;
+
   ul {
     gap: 24px;
     display: flex;
     flex-direction: column;
-  }
 
-  .collapse {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: $color-1;
-    border-radius: 5px;
-    height: 30px;
-    color: $color-2;
-    font-size: 13px;
-    font-weight: $medium;
-    padding: 7px;
+    .collapse {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $color-1;
+      border-radius: 5px;
+      height: 30px;
+      color: $color-2;
+      font-size: 13px;
+      font-weight: $medium;
+      padding: 7px;
 
-    .arrow_up {
-      background-image: url('../../../public/assets/arrow_up.svg');
-      background-repeat: no-repeat;
-      width: 32px;
-      height: 32px;
+      .arrow {
+        background-image: url('../../../public/assets/arrow_up.svg');
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+        transition: transform 0.5s ease;
+      }
+
+      .rotate {
+        transform: rotate(-180deg);
+      }
+    }
+
+    .collapse_content {
+      height: auto;
+      background-color: $color-4;
+      overflow: hidden;
+      border-radius: 5px;
+      transition: height 1s ease-in-out;
+
+      &.open {
+        height: auto;
+      }
+
+      .collapse_content_text {
+        color: $color-1;
+        padding: 16px;
+        font-size: $text-xsmall;
+        font-weight: 400;
+        line-height: 17.11px;
+      }
     }
   }
 }
