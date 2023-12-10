@@ -9,7 +9,9 @@ const Header = () => {
   return (
     <header className="header_container">
       <div className="header_wrapper_logo">
+        <Link to='/'>
         <div className="header_logo"></div>
+        </Link>
       </div>
       <div className="header_nav">
         <Link to="/" className={`header_text_nav ${isHome ? 'active' : ''}`}>
