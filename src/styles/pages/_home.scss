@@ -123,6 +123,7 @@
     justify-content: center;
     gap: 16px;
     background-color: $color-3;
+    margin-top: auto;
 
 
     .footer_logo {
@@ -131,5 +132,6 @@
 
     .footer_text {
         color: $color-2;
+        font-size: $text-xsmall;
     }
 }
