@@ -2,7 +2,7 @@ import React from 'react';
 
 const Collapse = () => {
   return (
-    <div className="collapse_container">
+    <main className="collapse_container">
       <ul>
         <li className="collapse">
           Fiabilité
@@ -21,7 +21,7 @@ const Collapse = () => {
           <div className="arrow_up"></div>
         </li>
       </ul>
-    </div>
+    </main>
   );
 };
 

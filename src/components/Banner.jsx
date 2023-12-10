@@ -1,14 +1,14 @@
 import React from 'react';
 
-const Banner = () => {
+const Banner = ({ pictureUrl, title}) => {
   return (
     <section className="banner">
       <img
         className="banner_picture"
-        src="./assets/mountain_sea.png"
+        src={pictureUrl}
         alt="Vue sur mer et montagne"
       ></img>
-      <h1 className="banner_title">Chez vous, partout et ailleurs</h1>
+      {title && <h1 className="banner_title">{title}</h1>}
     </section>
   );
 };

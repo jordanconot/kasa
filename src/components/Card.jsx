@@ -1,10 +1,7 @@
 import React from 'react';
-import Banner from './Banner';
 
 const Card = () => {
     return (
-    <>
-        <Banner />
         <main className='main_container'>
             <section className='card_container'>
                 <div className='card_list'>
@@ -31,7 +28,6 @@ const Card = () => {
                 </div>
             </section>
         </main>
-    </>
     );
 };
 

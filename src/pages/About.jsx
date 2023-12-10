@@ -5,13 +5,13 @@ import Collapse from '../components/Collapse';
 import Footer from '../components/Footer';
 
 const About = () => {
-    return (
-        <>
+    return (  
+        <div className='container'>
             <Header />
-            <Banner />
+            <Banner pictureUrl='./assets/mountain_hood.png'/>
             <Collapse />
             <Footer />
-        </>
+        </div>   
     );
 };
 
