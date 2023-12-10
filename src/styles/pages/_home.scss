@@ -25,6 +25,10 @@
       font-size: $text-xsmall;
       font-weight: $medium;
       line-height: 17.11px;
+
+      &.active {
+        text-decoration: underline;
+      }
     }
   }
 }
