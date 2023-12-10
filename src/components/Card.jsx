@@ -1,12 +1,11 @@
 import React from 'react';
+import Banner from './Banner';
 
 const Card = () => {
     return (
+    <>
+        <Banner />
         <main className='main_container'>
-            <section className='banner'>
-                <img className='banner_picture' src='./assets/mountain_sea.png' alt='Vue sur mer et montagne'></img>
-                <h1 className='banner_title'>Chez vous, partout et ailleurs</h1>
-            </section>
             <section className='card_container'>
                 <div className='card_list'>
                     <a href=''>
@@ -32,6 +31,7 @@ const Card = () => {
                 </div>
             </section>
         </main>
+    </>
     );
 };
 

@@ -1,0 +1,28 @@
+.collapse_container {
+  padding: 16px;
+  ul {
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .collapse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-1;
+    border-radius: 5px;
+    height: 30px;
+    color: $color-2;
+    font-size: 13px;
+    font-weight: $medium;
+    padding: 7px;
+
+    .arrow_up {
+      background-image: url('../../../public/assets/arrow_up.svg');
+      background-repeat: no-repeat;
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
