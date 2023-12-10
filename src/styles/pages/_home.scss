@@ -107,6 +107,10 @@
       }
 
       .card_location_picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
       }
 
       .title_n2 {
