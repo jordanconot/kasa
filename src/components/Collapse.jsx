@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-const Collapse = () => {
+const Collapse = ({ collapseData }) => {
   const [isOpenFiabilite, setOpenFiabilite] = useState(false);
   const [isOpenRespect, setOpenRespect] = useState(false);
   const [isOpenService, setOpenService] = useState(false);
   const [isOpenSecurite, setOpenSecurite] = useState(false);
 
   return (
-    <main className="collapse_container">
+    <main className='collapse_container'>
       <ul>
         <li className="collapse" onClick={() => setOpenFiabilite(!isOpenFiabilite)}>
           Fiabilité

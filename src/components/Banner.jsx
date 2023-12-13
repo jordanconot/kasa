@@ -6,7 +6,7 @@ const Banner = ({ pictureUrl, title}) => {
       <img
         className="banner_picture"
         src={pictureUrl}
-        alt="Vue sur mer et montagne"
+        alt={title}
       ></img>
       {title && <h1 className="banner_title">{title}</h1>}
     </section>
