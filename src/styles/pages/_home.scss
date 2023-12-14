@@ -47,7 +47,6 @@
     .banner_title {
       position: absolute;
       top: 0;
-      right: 0;
       height: 100%;
       z-index: 2;
       display: flex;
@@ -56,7 +55,7 @@
       font-size: $text-medium;
       color: $color-2;
       font-weight: $medium;
-      padding-inline: 76px;
+      padding-inline: 16px;
     }
 
     &::after {
@@ -92,7 +91,11 @@
       position: relative;
       height: 255px;
       border-radius: 10px;
-      background-color: $color-1;
+
+      &:hover::before {
+        opacity: 0.1;
+        transition: opacity 0.45s ease-in-out;
+      }
 
       &::before {
         content: '';
@@ -104,6 +107,8 @@
         opacity: 0.5;
         right: 0;
         top: 0;
+
+
       }
 
       .card_location_picture {
@@ -134,12 +139,6 @@
     justify-content: center;
     gap: 16px;
     background-color: $color-3;
-    margin-top: auto;
-
-
-    // .footer_logo {
-
-    // }
 
     .footer_text {
         color: $color-2;

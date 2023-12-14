@@ -13,10 +13,17 @@ $color-1: #FF6060;
 $color-2: #FFFFFF;
 $color-3: #000000;
 $color-4: #F6F6F6;
-$linear-gradient: linear-gradient(180deg, #FFFFFF00 0%, #00000080 50%);
+$linear-gradient: linear-gradient(180deg, $color-1, #00000080);
 
 $medium: 600;
 
 $text-xsmall: 12px;
 $text-small: 18px;
 $text-medium: 24px;
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
