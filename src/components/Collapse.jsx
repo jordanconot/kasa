@@ -5,11 +5,60 @@ const Collapse = ({ collapseData }) => {
   const [isOpenRespect, setOpenRespect] = useState(false);
   const [isOpenService, setOpenService] = useState(false);
   const [isOpenSecurite, setOpenSecurite] = useState(false);
+  const [isOpenSections, setOpenSections] = useState({});
+
+  const toggleCollapse = (index) => {
+    setOpenSections((prev) => ({ ...prev, [index]: !prev[index] }));
+  };
+
+  const renderContentLi = (item, index) => {
+    if(item.title === 'Équipements') {
+      const equipments = item.content.split(',')
+
+      return (
+        <ul className='list_equipments'>
+          {equipments.map((equipment, equipmentIndex) => (
+            <li className='item_list_equipments' key={equipmentIndex}>{equipment}</li>
+          ))}
+        </ul>
+      );
+    } else {
+      return <p className="collapse_content_text">{item.content}</p>
+    }
+  }
+
+  if (collapseData && collapseData.length) {
+
+    return (
+      <main className="collapse_container">
+          {collapseData.map((item, index) => (
+        <ul key={index} className='collapse_container_ul'>
+            <div  className="collapse_dropdown">
+              <div className="collapse" onClick={() => toggleCollapse(index)}>
+                {item.title}
+                <div
+                  className={`arrow ${isOpenSections[index] ? 'rotate' : ''}`}
+                ></div>
+              </div>
+              {isOpenSections[index] && (
+                <div
+                  className={`collapse_content ${
+                    isOpenSections[index] ? 'open' : ''}`}
+                >
+                  {renderContentLi(item, index)}
+                </div>
+              )}
+            </div>
+        </ul>
+          ))}
+      </main>
+    );
+  }
 
   return (
     <main className="collapse_container">
-      <ul>
         <div className="collapse_dropdown">
+      <ul className='collapse_container_ul gap'>
           <li
             className="collapse"
             onClick={() => setOpenFiabilite(!isOpenFiabilite)}
@@ -28,9 +77,11 @@ const Collapse = ({ collapseData }) => {
               </p>
             </div>
           )}
+          </ul>
         </div>
 
         <div className="collapse_dropdown">
+        <ul className='collapse_container_ul gap'>
           <li
             className="collapse"
             onClick={() => setOpenRespect(!isOpenRespect)}
@@ -47,8 +98,10 @@ const Collapse = ({ collapseData }) => {
               </p>
             </div>
           )}
+          </ul>
         </div>
         <div className="collapse_dropdown">
+        <ul className='collapse_container_ul gap'>
           <li
             className="collapse"
             onClick={() => setOpenService(!isOpenService)}
@@ -65,9 +118,11 @@ const Collapse = ({ collapseData }) => {
               </p>
             </div>
           )}
+          </ul>
         </div>
 
         <div className="collapse_dropdown">
+        <ul className='collapse_container_ul gap'>
           <li
             className="collapse"
             onClick={() => setOpenSecurite(!isOpenSecurite)}
@@ -88,8 +143,8 @@ const Collapse = ({ collapseData }) => {
               </p>
             </div>
           )}
+          </ul>
         </div>
-      </ul>
     </main>
   );
 };

@@ -1,12 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import data from '../data/data.json';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
-const LocationDetails = () => {
+const LocationDetails = ({ locationdata }) => {
   const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
 
   const { id } = useParams();
+  const navigate = useNavigate();
+
   const locationData = data.find((location) => location.id === id);
+  useEffect(() => {
+    if (!locationData) {
+      navigate('/404');
+    }
+  }, [locationData, navigate]);
+
+  if(!locationData) {
+    return null;
+  }
+
 
   const renderStars = (rating) => {
     const starsActive = `../assets/star-active.svg`;
@@ -58,7 +70,7 @@ const LocationDetails = () => {
               className="card_location_arrow_right"
             ></button>
             <div className="card_location_counter">
-              {currentPictureIndex + 1} / {locationData.pictures.length}
+              {currentPictureIndex + 1}/{locationData.pictures.length}
             </div>
           </>
         )}
