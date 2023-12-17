@@ -30,7 +30,7 @@ const Collapse = ({ collapseData }) => {
   if (collapseData && collapseData.length) {
 
     return (
-      <main className="collapse_container">
+      <section className="collapse_container">
           {collapseData.map((item, index) => (
         <ul key={index} className='collapse_container_ul'>
             <div  className="collapse_dropdown">
@@ -51,12 +51,12 @@ const Collapse = ({ collapseData }) => {
             </div>
         </ul>
           ))}
-      </main>
+      </section>
     );
   }
 
   return (
-    <main className="collapse_container">
+    <section className="collapse_container">
         <div className="collapse_dropdown">
       <ul className='collapse_container_ul gap'>
           <li
@@ -145,7 +145,7 @@ const Collapse = ({ collapseData }) => {
           )}
           </ul>
         </div>
-    </main>
+    </section>
   );
 };
 

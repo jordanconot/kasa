@@ -19,7 +19,6 @@ const LocationDetails = ({ locationdata }) => {
     return null;
   }
 
-
   const renderStars = (rating) => {
     const starsActive = `../assets/star-active.svg`;
     const starsInactive = `../assets/star-inactive.svg`;
@@ -28,6 +27,7 @@ const LocationDetails = ({ locationdata }) => {
     for (let i = 0; i < 5; i++) {
       stars.push(
         <img
+          className='stars'
           key={i}
           src={i < rating ? starsActive : starsInactive}
           alt="Etoile"

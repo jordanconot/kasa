@@ -15,15 +15,33 @@ $color-3: #000000;
 $color-4: #F6F6F6;
 $linear-gradient: linear-gradient(180deg, $color-1, #00000080);
 
-$medium: 600;
+$small: 500;
+$medium: 500;
 
+$text-xxsmall: 10px;
 $text-xsmall: 12px;
+$text-vsmall: 14px;
 $text-small: 18px;
 $text-medium: 24px;
+$text-big: 36px;
+$text-xbig: 96px;
 
 .container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media(min-width: 992px) {
+        padding: 40px;
+    }
+}
+
+@media(min-width: 992px) {
+    .footer_container {
+        margin-left: -40px;
+        margin-right: -40px;
+        margin-bottom: -40px;
+        width: calc(100% + 80px);
+    }
 }

@@ -7,7 +7,7 @@
   margin: 26px;
 
   h1 {
-    font-size: 96px;
+    font-size: $text-xbig;
     color: $color-1;
     font-weight: 700;
     line-height: 136.9px;
@@ -21,7 +21,7 @@
   }
 
   a {
-    font-size: 14px;
+    font-size: $text-vsmall;
     color: $color-1;
     line-height: 19.96px;
     font-weight: $medium;

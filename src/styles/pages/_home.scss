@@ -26,6 +26,12 @@
       font-weight: $medium;
       line-height: 17.11px;
 
+      @media(min-width: 992px) {
+        font-size: $text-medium;
+        text-transform: capitalize;
+        font-weight: $small;
+      }
+
       &.active {
         text-decoration: underline;
       }
@@ -143,5 +149,10 @@
     .footer_text {
         color: $color-2;
         font-size: $text-xsmall;
+
+        @media(min-width: 992px) {
+          font-size: $text-medium;
+        }
     }
 }
+
