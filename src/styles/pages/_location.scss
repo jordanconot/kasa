@@ -83,7 +83,11 @@
 
     @media (min-width: 992px) {
       margin-top: 32px;
-      max-height: 96px;
+      max-height: 163px;
+    }
+
+    @media (min-width: 1440px) {
+      max-height: 123px;
     }
 
     .location_header_title {
@@ -103,6 +107,7 @@
 
         @media (min-width: 992px) {
           font-size: $text-big;
+          line-height: 51.34px;
         }
       }
 
@@ -157,7 +162,7 @@
         flex-direction: column;
         margin-top: 0;
         position: relative;
-        top: -116px;
+        top: -123px;
       }
 
       .location_header_host {
@@ -220,16 +225,16 @@
   }
 
   .collapse {
-    height: 52px !important;
-    font-size: $text-small !important;
-    padding: 10px 20px !important;
-    border-radius: 10px !important;
+    height: 52px;
+    font-size: $text-small;
+    padding: 10px 20px;
+    border-radius: 10px;
   }
 
   .collapse_content_text {
-    font-size: $text-vsmall !important;
+    font-size: $text-vsmall;
   }
   .list_equipments {
-    font-size: $text-vsmall !important;
+    font-size: $text-vsmall;
   }
 }

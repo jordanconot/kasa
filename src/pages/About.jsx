@@ -9,7 +9,7 @@ const About = () => {
         <div className='container'>
             <Header />
             <Banner pictureUrl='./assets/mountain_hood.png'/>
-            <Collapse />
+            <Collapse  />
             <Footer />
         </div>   
     );

@@ -12,28 +12,29 @@ const Collapse = ({ collapseData }) => {
   };
 
   const renderContentLi = (item, index) => {
-    if(item.title === 'Équipements') {
-      const equipments = item.content.split(',')
+    if (item.title === 'Équipements') {
+      const equipments = item.content.split(',');
 
       return (
-        <ul className='list_equipments'>
+        <ul className="list_equipments">
           {equipments.map((equipment, equipmentIndex) => (
-            <li className='item_list_equipments' key={equipmentIndex}>{equipment}</li>
+            <li className="item_list_equipments" key={equipmentIndex}>
+              {equipment}
+            </li>
           ))}
         </ul>
       );
     } else {
-      return <p className="collapse_content_text">{item.content}</p>
+      return <p className="collapse_content_text">{item.content}</p>;
     }
-  }
+  };
 
   if (collapseData && collapseData.length) {
-
     return (
       <section className="collapse_container">
-          {collapseData.map((item, index) => (
-        <ul key={index} className='collapse_container_ul'>
-            <div  className="collapse_dropdown">
+        {collapseData.map((item, index) => (
+          <ul key={index} className="collapse_container_ul">
+            <div className="collapse_dropdown">
               <div className="collapse" onClick={() => toggleCollapse(index)}>
                 {item.title}
                 <div
@@ -43,22 +44,23 @@ const Collapse = ({ collapseData }) => {
               {isOpenSections[index] && (
                 <div
                   className={`collapse_content ${
-                    isOpenSections[index] ? 'open' : ''}`}
+                    isOpenSections[index] ? 'open' : ''
+                  }`}
                 >
                   {renderContentLi(item, index)}
                 </div>
               )}
             </div>
-        </ul>
-          ))}
+          </ul>
+        ))}
       </section>
     );
   }
 
   return (
-    <section className="collapse_container">
+    <section className="collapse_container about_container">
+      <ul className="collapse_container_ul gap about_container_ul">
         <div className="collapse_dropdown">
-      <ul className='collapse_container_ul gap'>
           <li
             className="collapse"
             onClick={() => setOpenFiabilite(!isOpenFiabilite)}
@@ -77,11 +79,11 @@ const Collapse = ({ collapseData }) => {
               </p>
             </div>
           )}
-          </ul>
         </div>
+      </ul>
 
+      <ul className="collapse_container_ul gap about_container_ul">
         <div className="collapse_dropdown">
-        <ul className='collapse_container_ul gap'>
           <li
             className="collapse"
             onClick={() => setOpenRespect(!isOpenRespect)}
@@ -98,10 +100,10 @@ const Collapse = ({ collapseData }) => {
               </p>
             </div>
           )}
-          </ul>
         </div>
+      </ul>
+      <ul className="collapse_container_ul gap about_container_ul">
         <div className="collapse_dropdown">
-        <ul className='collapse_container_ul gap'>
           <li
             className="collapse"
             onClick={() => setOpenService(!isOpenService)}
@@ -118,11 +120,11 @@ const Collapse = ({ collapseData }) => {
               </p>
             </div>
           )}
-          </ul>
         </div>
+      </ul>
 
+      <ul className="collapse_container_ul gap about_container_ul">
         <div className="collapse_dropdown">
-        <ul className='collapse_container_ul gap'>
           <li
             className="collapse"
             onClick={() => setOpenSecurite(!isOpenSecurite)}
@@ -143,8 +145,8 @@ const Collapse = ({ collapseData }) => {
               </p>
             </div>
           )}
-          </ul>
         </div>
+      </ul>
     </section>
   );
 };

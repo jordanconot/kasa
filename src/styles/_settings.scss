@@ -7,7 +7,16 @@
     border: none;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
+    ::-webkit-scrollbar {
+        background: #F6F6F6;
+        width: 5px;
+    }
+    ::-webkit-scrollbar-thumb {
+        border: solid 0 transparent;
+        background-color: #FF6060;
+    }
 }
+
 
 $color-1: #FF6060;
 $color-2: #FFFFFF;
@@ -47,5 +56,6 @@ $text-xxxbig: 288px;
         margin-bottom: -40px;
         width: calc(100% + 80px);
         margin-top: 24px;
+        gap: 32px;
     }
 }

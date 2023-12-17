@@ -21,6 +21,11 @@
       font-weight: $medium;
       padding: 7px;
 
+      @media(min-width: 768px) {
+        font-size: $text-medium;
+        height: 52px;
+    }
+
       .arrow {
         background-image: url('../../../public/assets/arrow_up.svg');
         background-repeat: no-repeat;
@@ -53,6 +58,11 @@
         font-size: $text-xsmall;
         font-weight: 400;
         line-height: 17.11px;
+
+        @media(min-width: 992px) {
+          font-size: $text-small;
+          line-height: 25.67px;
+      }
       }
     }
   }
@@ -67,5 +77,25 @@
 }
 
 .gap {
-  gap: 0 !important;
+  gap: 0;
+}
+
+.collapse_container.about_container{
+  flex-direction: column;
+  margin-top: -16px;
+
+  @media(min-width: 768px) {
+    gap: 24px;
+    width: 75%;
+    position: relative;
+    top: 0;
+    left: 13%;
+    right: 0;
+    bottom: 0;
+
+    
+}
+}
+.collapse_container_ul.about_container_ul {
+  width: 100%;
 }
