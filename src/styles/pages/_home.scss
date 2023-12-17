@@ -48,6 +48,10 @@
       height: 111px;
       object-fit: cover;
       border-radius: 10px;
+
+      @media(min-width: 992px) {
+        height: 223px;
+      }
     }
 
     .banner_title {
@@ -62,6 +66,13 @@
       color: $color-2;
       font-weight: $medium;
       padding-inline: 16px;
+
+      @media(min-width: 992px) {
+        font-size: $text-xxbig;
+        padding-inline: 0;
+        right: 0;
+        left: 0;
+      }
     }
 
     &::after {
@@ -77,6 +88,9 @@
         background-color: rgba(0, 0, 0, 0.3);
         z-index: 1;
        
+        @media(min-width: 992px) {
+          height: 223px;
+        }
       }
   }
 
@@ -86,11 +100,21 @@
   padding: 16px 16px;
 
   .card_container {
+
     
     .card_list {
       gap: 16px;
       display: flex;
       flex-direction: column;
+
+      @media(min-width: 992px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+        margin: 40px 24px;
+        gap: 48px;
+      }
+
     }
 
     .card_location {
@@ -133,6 +157,16 @@
         font-weight: $medium;
         line-height: 25.67px;
       }
+
+      @media(min-width: 992px) {
+        height: 340px;
+        width: 340px;
+      }
+    }
+
+    @media(min-width: 992px) {
+      background-color: $color-4;
+      border-radius: 10px;
     }
   }
 }

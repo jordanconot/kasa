@@ -13,6 +13,7 @@ $color-1: #FF6060;
 $color-2: #FFFFFF;
 $color-3: #000000;
 $color-4: #F6F6F6;
+
 $linear-gradient: linear-gradient(180deg, $color-1, #00000080);
 
 $small: 500;
@@ -24,7 +25,9 @@ $text-vsmall: 14px;
 $text-small: 18px;
 $text-medium: 24px;
 $text-big: 36px;
+$text-xxbig: 48px;
 $text-xbig: 96px;
+$text-xxxbig: 288px;
 
 .container {
     min-height: 100vh;
@@ -43,5 +46,6 @@ $text-xbig: 96px;
         margin-right: -40px;
         margin-bottom: -40px;
         width: calc(100% + 80px);
+        margin-top: 24px;
     }
 }
