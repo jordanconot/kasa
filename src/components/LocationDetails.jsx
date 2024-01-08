@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import data from '../data/data.json';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const LocationDetails = ({ locationdata }) => {
+const LocationDetails = () => {
   const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
 
   const { id } = useParams();
@@ -91,7 +91,7 @@ const LocationDetails = ({ locationdata }) => {
         <div className="location_header_star_host">
           <div className="location_header_host">
             <p>{locationData.host.name}</p>
-            <img src={locationData.host.picture} alt="blabla"></img>
+            <img src={locationData.host.picture} alt={locationData.host.name}></img>
           </div>
           <div className="location_header_star">
             {renderStars(Number(locationData.rating))}

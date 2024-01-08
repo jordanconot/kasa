@@ -6,9 +6,9 @@
   gap: 40px;
   margin: 26px;
 
-  @media(min-width: 992px) {
+  @media (min-width: 992px) {
     gap: 100px;
-}
+  }
 
   h1 {
     font-size: $text-xbig;
@@ -16,10 +16,10 @@
     font-weight: 700;
     line-height: 136.9px;
 
-    @media(min-width: 992px) {
+    @media (min-width: 992px) {
       font-size: 183px;
-      line-height:normal;
-  }
+      line-height: normal;
+    }
   }
 
   h2 {
@@ -28,10 +28,10 @@
     font-size: $text-small;
     line-height: 25.67px;
 
-    @media(min-width: 992px) {
+    @media (min-width: 992px) {
       font-size: $text-big;
       line-height: 51.34px;
-  }
+    }
   }
 
   a {
@@ -41,9 +41,9 @@
     font-weight: $medium;
     text-decoration: underline;
 
-    @media(min-width: 992px) {
+    @media (min-width: 992px) {
       font-size: $text-small;
       line-height: 25.67px;
-  }
+    }
   }
 }
